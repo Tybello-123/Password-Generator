@@ -1,0 +1,202 @@
+$base-color: #277BC0;
+$body-color: #FFB200;
+$btn-color: #FFCB42;
+$gen-color: #FFF4CF;
+
+
+
+body{
+background-color: $base-color;
+
+
+.big-container{
+    width: 40%;
+    max-width: 40%;
+    margin: 0 auto;
+    background-color: $body-color;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 200,400,700;
+    padding: 3em;
+    border-radius: 1em;
+
+    .heading{
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .g-password{
+        max-width: 100%;
+        height: 60px;
+         background-color: $gen-color;
+        
+         padding-left: 1em;
+         margin-bottom: 0.5em;
+
+       
+
+        span{
+            
+            font-size: 1.1rem;
+        }
+
+        button{
+            
+            color: white;
+            background-color: black;
+         
+            height: 100%;
+
+        }
+
+        button:hover{
+        
+        background-color: $btn-color;
+        color: black;
+        }
+       
+    }
+
+
+    .row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        label{
+            display: inline;
+            font-weight: 200;
+        
+        }
+
+        input{
+            display: inline;
+
+
+        }
+
+        input[type="number"]{
+            width: 80px;
+            height: 30px;
+            padding-left: 1em;
+        }
+
+        input[type="checkbox"]{
+            width: 30px;
+            height: 30px;
+            accent-color: black;
+        }
+        
+    }
+
+
+    .g-but{
+        display: block;
+        width: 80%;
+        font-size: 1.5rem;
+        padding: 0.3em;
+        margin: 0 auto;
+        border-radius: 0.3em;
+        background-color: black;
+        color: white;
+        margin: 0.5em auto 0em;
+    }
+
+    .g-but:hover{
+        background-color: $btn-color;
+        color: black;
+        
+    }
+}
+
+
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+    body{
+       
+
+        .big-container{
+        
+        .g-password{
+
+            height: 60px;
+        
+            span{
+                font-size: 1rem;
+                
+              
+            }
+
+            button{
+                font-size: 0.8rem;
+                
+             }
+        }
+
+        .row{
+            label{
+                font-size: 1rem;
+            }
+
+            input[type="number"]{
+                width: 40px;
+                height: 15px;
+             
+            }
+    
+            input[type="checkbox"]{
+                width: 20px;
+                height: 20px;
+            
+        }
+        }
+
+        .g-but{
+          font-size: 1rem;
+          padding: 0.5rem 0;
+        }
+
+
+    }
+     
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+
+    body{
+       
+
+        .big-container{
+            width: 80%;
+            max-width: 70%;
+            padding: 1.5em;
+            margin: 1em auto;
+
+            h1{
+                font-size: 1.5rem;
+            }
+        
+        .g-password{
+
+            height: 55px;
+         
+    
+            span{
+                font-size: 0.85rem;
+                
+              
+            }
+
+        }
+
+       
+
+    }
+     
+    }
+}
