@@ -15,7 +15,6 @@ background-color: $base-color;
     margin: 0 auto;
     background-color: $body-color;
     font-family: 'League Spartan', sans-serif;
-    font-weight: 200,400,700;
     padding: 3em;
     border-radius: 1em;
 
@@ -28,15 +27,14 @@ background-color: $base-color;
         max-width: 100%;
         height: 60px;
          background-color: $gen-color;
-        
          padding-left: 1em;
-         margin-bottom: 0.5em;
+        margin-bottom: 2em;
 
        
 
         span{
             
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
 
         button{
@@ -61,10 +59,12 @@ background-color: $base-color;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 0.5em;
         
         label{
             display: inline;
-            font-weight: 200;
+            font-weight: 400;
+            font-size: 1.3rem;
         
         }
 
@@ -98,7 +98,7 @@ background-color: $base-color;
         border-radius: 0.3em;
         background-color: black;
         color: white;
-        margin: 0.5em auto 0em;
+        margin: 1em auto 0em;
     }
 
     .g-but:hover{

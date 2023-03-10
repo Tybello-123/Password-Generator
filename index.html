@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/password-generator/css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Document</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
         <div class="container">
 
             <div id="result-container" class="row g-password">
-                <span id="result">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                <span id="result-el">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
                 <button id="copy-btn" class="copy-but">copy📋</button>
             </div>
 
@@ -28,20 +28,20 @@
                 <input id="pass-len" type="number" class="form-control"/>
             </div>
             <div class="row">
-                <label for="cbox-1">Include Upper Case Letters</label>
-                <input id="cbox-1" type="checkbox" class="checkbox"/>
+                <label for="uppercase">Include Upper Case Letters</label>
+                <input id="uppercase" type="checkbox" class="checkbox"/>
             </div>
             <div class="row">
-                <label for="cbox-2">Include Lower Case Letters</label>
-                <input id="cbox-2" type="checkbox" class="checkbox"/>
+                <label for="lowercase">Include Lower Case Letters</label>
+                <input id="lowercase" type="checkbox" class="checkbox"/>
             </div>
             <div class="row">
-                <label for="cbox-3">Include Numbers</label>
-                <input id="cbox-3" type="checkbox" class="checkbox"/>
+                <label for="numbers">Include Numbers</label>
+                <input id="numbers" type="checkbox" class="checkbox"/>
             </div>
             <div class="row">
-                <label for="cbox-4">Include Symbols</h2>
-                <input id="cbox-4" type="checkbox" class="checkbox"/>
+                <label for="symbols">Include Symbols</label>
+                <input id="symbols" type="checkbox" class="checkbox"/>
             </div>
         </div>
         <button type="submit" id="submit" class="g-but">Generate Password</button>
