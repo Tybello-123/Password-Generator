@@ -1,8 +1,4 @@
 
-
-
-
-
 const resultEl = document.getElementById('result-el');
 const copyBtn = document.getElementById('copy-btn');
 const generateEl = document.getElementById('submit');
@@ -33,6 +29,24 @@ generateEl.addEventListener( 'click', () => {
         );
 })
 
+//copy password to clipboard
+copyBtn.addEventListener('click', () => {
+   const textarea = document.createElement('textarea');
+   const password = resultEl.innerText;
+
+   if(!password){
+    return;
+   }
+
+   textarea.value = password;
+   document.body.appendChild(textarea);
+   textarea.select();
+   document.execCommand('copy');
+   textarea.remove();
+   alert('password copied successfully')
+
+} )
+
 // generate password function
 
 function generatePassword(upper, lower, number, symbol, length){
@@ -42,17 +56,38 @@ function generatePassword(upper, lower, number, symbol, length){
  // 4. add final pw to the pw var return
 
   let generatedPassword = '';
+
   const typesCount = upper + lower + number + symbol;
 
   console.log('typesCount: ', typesCount);
 
   const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(
+
     item => Object.values(item)[0]
   );
 
-  console.log('typesArr: ', typesArr);
+   // console.log('typesArr: ', typesArr);
 
+  if(typesCount === 0){
+    return ''
+  }
 
+  for(let i = 0; i < length; i += typesCount){
+    typesArr.forEach(type => {
+      const funcName = Object.keys(type)[0];
+
+      // console.log('funcName:' , funcName);
+
+      generatedPassword += randonFunc[funcName]();
+    })
+  }
+
+  const finalPassword = generatedPassword.slice(0, length);
+
+  return finalPassword;
+ 
+
+  
 }
 
 
