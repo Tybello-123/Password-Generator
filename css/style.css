@@ -25,7 +25,10 @@ body .big-container .g-password {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  max-width: 100%;
+  min-width: 100%;
+  max-width: -webkit-min-content;
+  max-width: -moz-min-content;
+  max-width: min-content;
   height: 60px;
   background-color: #FFF4CF;
   padding-left: 1em;
