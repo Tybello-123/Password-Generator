@@ -15,6 +15,16 @@ body .big-container .heading {
   font-weight: 600;
 }
 body .big-container .g-password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
   max-width: 100%;
   height: 60px;
   background-color: #FFF4CF;
@@ -22,7 +32,9 @@ body .big-container .g-password {
   margin-bottom: 2em;
 }
 body .big-container .g-password span {
-  font-size: 1.2rem;
+  word-wrap: break-word;
+  max-width: calc(100% - 50px);
+  font-size: 1.5rem;
 }
 body .big-container .g-password button {
   color: white;

@@ -24,6 +24,10 @@ background-color: $base-color;
     }
 
     .g-password{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position : relative;
         max-width: 100%;
         height: 60px;
          background-color: $gen-color;
@@ -33,8 +37,9 @@ background-color: $base-color;
        
 
         span{
-            
-            font-size: 1.2rem;
+            word-wrap: break-word;
+            max-width: calc(100% - 50px);
+            font-size: 1.5rem;
         }
 
         button{

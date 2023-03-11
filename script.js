@@ -10,6 +10,24 @@ const symbolsEl = document.getElementById('symbols');
 
 
 
+//copy password to clipboard
+copyBtn.addEventListener('click', () => {
+  const textarea = document.createElement('textarea');
+  const password = resultEl.innerText;
+
+  if(!password){
+   return;
+  }
+
+  textarea.value = password;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand('copy');
+  textarea.remove();
+  alert('password copied successfully')
+
+} )
+
 // add an event listener to the generator button
 generateEl.addEventListener( 'click', () => {
     const length = +passwordLength.value;
@@ -29,23 +47,7 @@ generateEl.addEventListener( 'click', () => {
         );
 })
 
-//copy password to clipboard
-copyBtn.addEventListener('click', () => {
-   const textarea = document.createElement('textarea');
-   const password = resultEl.innerText;
 
-   if(!password){
-    return;
-   }
-
-   textarea.value = password;
-   document.body.appendChild(textarea);
-   textarea.select();
-   document.execCommand('copy');
-   textarea.remove();
-   alert('password copied successfully')
-
-} )
 
 // generate password function
 
