@@ -47,9 +47,15 @@ generateEl.addEventListener( 'click', () => {
         );
 })
 
-
-
 // generate password function
+
+if(passwordLength < 8 || passwordLength > 128){
+  alert('Password length must be betwen 8 and 128 characters');
+  return;
+}
+
+
+
 
 function generatePassword(upper, lower, number, symbol, length){
  // 1. Init pw var
